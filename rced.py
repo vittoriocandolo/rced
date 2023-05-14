@@ -28,6 +28,7 @@ def delete_comment(comment):
 
 def safe_delete_comment(comment):
     random_sentence = get_random_sentence()
+    reddit.validate_on_submit = True
     comment.edit(random_sentence)
     time.sleep(random.uniform(5, 10))
     comment.delete()
