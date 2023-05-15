@@ -1,6 +1,7 @@
 import praw
-import time
 import random
+import sys
+import time
 
 rced_id = '' # app id you get in the mail after app creation
 rced_secret = ''
@@ -40,7 +41,7 @@ for comment in reddit.redditor(reddit_username).comments.new(limit=None):
     print('\n')
 
     while True:
-        action = input('Choose an action (overwrite, delete, safe-delete, skip): ')
+        action = input('Choose an action (overwrite, delete, safe-delete, skip, exit): ')
 
         if action.lower() == 'overwrite':
             print('\n')
@@ -54,5 +55,7 @@ for comment in reddit.redditor(reddit_username).comments.new(limit=None):
             break
         elif action.lower() == 'skip':
             break
+        elif action.lower() == 'exit':
+            sys.exit(0)
         else:
             print('Invalid input. Please try again.')
