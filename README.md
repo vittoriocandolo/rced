@@ -20,7 +20,7 @@ Make sure to set up a venv and install it with `pip install praw`
 4. Now check your email, the "APP ID" has been sent to you, put it as the value of the `rced_id` global variable
 5. Fill the two remaining global variables with your reddit username and password and you are good to go.
 
-## Discalimer
+## Disclaimer
 
 Using this script or modifications of this script to wipe your comment history is against Reddit terms.
 
